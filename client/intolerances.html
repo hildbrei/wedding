@@ -1,0 +1,25 @@
+<h3>Allergier og intolleranser</h3>
+<h5>Er det noe du ikke kan spise?</h5>
+<div class="row">
+	<div class="col-lg-9">
+    <form name="intolerancesForm" novalidate>        
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="list-unstyled">
+                    <li ng-repeat="type in intolerances.FoodTypes">
+                         <label>
+                            <input type="checkbox" checklist-change="intolerances.UpdateAllergens()" checklist-model="intolerances.AllergensList" checklist-value="type"> {{type}}
+                        </label>
+                    </li>
+                </ul>               
+            </div>
+            <div class="col-lg-12">
+                <textarea cols="20" rows="2" ng-change="intolerances.UpdateAllergens()" ng-model="intolerances.AllergensString" placeholder="Fyll inn eventuelle andre intoleranser"></textarea>
+            </div>                
+        </div>       
+        <navigations back="'partyMenu'" forward="'other'"></navigations>       
+    </form>
+	</div>
+</div>
+
+	 

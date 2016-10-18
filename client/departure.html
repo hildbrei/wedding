@@ -1,0 +1,14 @@
+<h3>Avreise</h3>
+<h5>Når drar du hjem?</h5>
+<div class="row">
+    <div class="col-lg-3">
+        <button class="btn btn-default" ng-class="{'btn-success':$root.UserData.DepartureSelected == 'Lørdag'}" ng-click="$root.UserData.DepartureSelected = 'Lørdag'">Lørdag</button>
+    </div>
+     <div class="col-lg-3">
+         <button class="btn btn-default" ng-class="{'btn-success':$root.UserData.DepartureSelected == 'Søndag'}" ng-click="$root.UserData.DepartureSelected = 'Søndag'">Søndag</button>
+     </div>
+</div>
+<br/>
+<br/>
+
+<navigations back="'arrival'" forward="'sleepover'"></navigations>

@@ -1,0 +1,7 @@
+<p>Kommer du? 
+    <button type="button" class="btn btn-default pull-right" ng-class="{'btn-success':$root.UserData.IsComing == false}" ng-click="answer.UpdateAnswer(false)">Nei</button>
+    <button type="button" class="btn btn-default pull-right" ng-class="{'btn-success':$root.UserData.IsComing == true}" ng-click="answer.UpdateAnswer(true)">Ja</button>
+</p>
+<p ng-if="$root.UserData.IsComing == false">Takk for svar!</p>
+<navigations hide-back="true" forward="'userContact'"></navigations>
+

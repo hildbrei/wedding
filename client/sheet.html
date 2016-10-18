@@ -1,0 +1,32 @@
+<h3>Overnatting</h3>
+<h5>Vil du leie sengesett og håndkle?</h5>
+<div class="row">
+	<div class="col-lg-9">
+    <form name="sheetForm" novalidate>        
+        <div class="row margin-bottom-1rem">
+            <div class="col-lg-4">
+               <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.RentSheet == true}" 
+                    ng-click="$root.UserData.RentSheet = true">
+                    Ja 
+               </button>
+            </div>
+            <div class="col-lg-4">
+               <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.RentSheet == false}" 
+                    ng-click="$root.UserData.RentSheet = false">
+                    Nei 
+               </button>
+            </div>
+            <div class="col-lg-4">
+                200,-
+            </div>           
+        </div>       
+        <navigations back="'sleepover'" forward="'food'"></navigations>       
+    </form>
+	</div>
+</div>
+
+	 

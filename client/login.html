@@ -1,0 +1,61 @@
+
+<div id="header">
+
+	<div ng-if="login.ErrorMessages.length" class="alert alert-danger" role="alert">
+		<h4>Det skjedde en feil. Mer info:</h4>
+		<ul>
+			<li ng-repeat="msg in login.ErrorMessages | reverse">{{msg}}</li>
+		</ul>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Infomasjonssiden for Reistad Askeland</h1>
+			<p class="subtitle">Siden du allerede har funnet denne siden er du nok også invitert til vårt bryllup! 
+														Da er det sikkert noen ting du lurer på og andre ting du er nysgjerrig på. 
+														Denne siden er ment til å gi deg svar.</p>
+			<br>
+			<br>
+			
+			<div class="row">
+					<div class="col-lg-8">
+						<form class="form-inline" novalidate name="loginForm" ng-submit="login.Login()">									
+							<div class="form-group" ng-class="{'has-error':loginForm.usercode.$invalid && !loginForm.usercode.$pristine || login.LoginError}">										
+								<label for="usercode">Skriv inn ditt ord:</label>
+								<input type="text" class="form-control usercode-input" ng-change="login.LoginError = false" name="usercode" required ng-model="login.UserCode"/>&nbsp<button type="submit" class="btn btn-default pull-right">OK</button>
+								<div class="help-block" ng-show="loginForm.usercode.$error.required && !loginForm.usercode.$pristine">Du må fylle inn ditt ord for å logge inn</div>
+								<div class="help-block" ng-show="login.LoginError">Feil ved innlogging</div>																		
+							</div>									
+						</form>
+					</div>
+			</div>
+			<br>
+			<br>
+			<h4>Generell info</h4>
+				<div class="row">
+					<div class="col-lg-1">
+							Når:
+					</div>
+					<div class="col-lg-11">
+							01.07.2017
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-lg-1">
+							Hvor:
+					</div>
+					<div class="col-lg-11">
+							Trysil, nærmere bestemt Høydehuset på Sjumilskogen.<br>Helt nøyaktig bestemt (GPS): 61.30588, 12.23870
+					</div>
+					</div>
+					<div class="row">
+					<div class="col-lg-1">
+							Kirke:
+					</div>
+					<div class="col-lg-11">
+							Trysil kirke. GPS: 61.317013, 12.260368
+					</div>
+				</div>
+		</div>										
+	</div>
+	
+</div>

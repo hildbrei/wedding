@@ -1,0 +1,34 @@
+
+<div class="row">
+	<div class="col-lg-9">
+			<form name="contactForm" ng-submit="contactForm.$valid && contact.submitForm()" novalidate> 
+
+        <!-- NAME -->
+        <div class="form-group" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }">
+            <label>Ditt navn</label>
+            <input type="text" name="name" class="form-control" ng-model="contact.name" required>
+						 <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="help-block">Skriv inn ditt navn</p>
+        </div>
+        
+        <!-- EMAIL -->
+        <div class="form-group"  ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+            <label>Din e-postadresse</label>
+            <input type="email" name="email" class="form-control" ng-model="contact.email" required>
+						<p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="help-block">Skriv inn gyldig e-post</p>
+        </div>
+
+				<!-- DESCRIPTION -->
+        <div class="form-group"  ng-class="{ 'has-error' : contactForm.description.$invalid && !contactForm.description.$pristine }">
+            <label>Hva lurer du på?</label>
+						<textarea name="description" class="form-control" ng-model="contact.description" required></textarea>
+						<p ng-show="contactForm.description.$invalid && !contactForm.description.$pristine" class="help-block">Skriv hva du lurer på</p>
+        </div>
+        
+        <!-- SUBMIT BUTTON -->
+        <button ng-disabled="contactForm.$invalid" type="submit" class="btn btn-primary">Send</button>
+        
+    </form>
+	</div>
+</div>
+
+	 

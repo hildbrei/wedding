@@ -1,0 +1,63 @@
+<h3>Overnatting</h3>
+<h5>Hvordan vil du overnatte?</h5>
+<div class="row">
+	<div class="col-lg-9">
+    <form name="sleepoverForm" novalidate>        
+        <div class="row margin-bottom-1rem">
+            <div class="col-lg-6">
+               <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.SleepSelected == sleepover.TFL}" 
+                    ng-click="sleepover.SelectSleepCabin(sleepover.TFL)">
+                    tor, fre, lør 
+               </button>
+            </div>
+            <div class="col-lg-6">
+                {{$root.UserData.SleepFromThuPrice}},-
+            </div>           
+        </div>
+        <div class="row margin-bottom-1rem">
+           <div class="col-lg-6">
+               <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.SleepSelected == sleepover.FL}" 
+                    ng-click="sleepover.SelectSleepCabin(sleepover.FL)">
+                    fre, lør 
+               </button>
+            </div>
+            <div class="col-lg-6">
+                {{$root.UserData.SleepFromFriPrice}},-
+            </div>
+        </div>
+        <div class="row margin-bottom-1rem">
+           <div class="col-lg-6">
+               <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.SleepSelected == sleepover.L}" 
+                    ng-click="sleepover.SelectSleepCabin(sleepover.L)">
+                    lør 
+               </button>
+            </div>
+            <div class="col-lg-6">
+                {{$root.UserData.SleepFromSatPrice}},-
+            </div>
+        </div>     
+         <div class="row margin-bottom-1rem">
+           <div class="col-lg-6">
+               <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.SleepSelected == sleepover.other}" 
+                    ng-click="sleepover.SelectSleepOtherPlace()">
+                    sover et annet sted 
+               </button>
+            </div>
+            <div class="col-lg-6">
+                -
+            </div>
+        </div>      
+        <navigations back="'departure'" forward="!sleepover.otherSelected ? 'sheet':''" disabled-forward="!$root.UserData.SleepSelected" hide-forward="sleepover.otherSelected"></navigations>       
+    </form>
+	</div>
+</div>
+
+	 

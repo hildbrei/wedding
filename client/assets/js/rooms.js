@@ -1,0 +1,3 @@
+wedding.controller('roomsController', function () {
+    
+})

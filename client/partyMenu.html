@@ -1,0 +1,74 @@
+<h3>Selskapsmeny</h3>
+<h5></h5>
+<div class="row">
+	<div class="col-lg-9">
+    <form name="partyMenuForm" novalidate>        
+        <div class="row margin-bottom-1rem">
+            <div class="col-lg-4">
+                Forrett
+            </div>
+            <div class="col-lg-4">
+                <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.AppetizerSelected == partyMenu.Appetizer1}" 
+                    ng-click="partyMenu.UpdateAppetizer(partyMenu.Appetizer1)">
+                    {{partyMenu.Appetizer1}}
+                </button>
+            </div>
+            <div class="col-lg-4">
+                 <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.AppetizerSelected == partyMenu.Appetizer2}" 
+                    ng-click="partyMenu.UpdateAppetizer(partyMenu.Appetizer2)">
+                    {{partyMenu.Appetizer2}}
+                </button>
+            </div>
+        </div>
+        <div class="row margin-bottom-1rem">
+            <div class="col-lg-4">
+                Hovedrett
+            </div>
+            <div class="col-lg-4">
+                <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.MainCourseSelected == partyMenu.MainCourse1}" 
+                    ng-click="partyMenu.UpdateMainCourse(partyMenu.MainCourse1)">
+                    {{partyMenu.MainCourse1}}
+                </button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.MainCourseSelected == partyMenu.MainCourse2}" 
+                    ng-click="partyMenu.UpdateMainCourse(partyMenu.MainCourse2)">
+                    {{partyMenu.MainCourse2}}
+                </button>
+            </div>
+        </div>
+        <div class="row margin-bottom-1rem">
+            <div class="col-lg-4">
+                Dessert
+            </div>
+            <div class="col-lg-4">
+                <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.DessertSelected == partyMenu.Dessert1}" 
+                    ng-click="partyMenu.UpdateDessert(partyMenu.Dessert1)">
+                    {{partyMenu.Dessert1}}
+                </button>
+            </div>
+            <div class="col-lg-4">
+                <button type="button" 
+                    class="btn btn-default" 
+                    ng-class="{'btn-success':$root.UserData.DessertSelected == partyMenu.Dessert2}" 
+                    ng-click="partyMenu.UpdateDessert(partyMenu.Dessert2)">
+                    {{partyMenu.Dessert2}}
+                </button>
+            </div>
+        </div>      
+        <navigations back="'userContact'" forward="'intolerances'"></navigations>       
+    </form>
+	</div>
+</div>
+
+	 

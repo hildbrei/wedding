@@ -1,0 +1,38 @@
+<h3>Annkomst</h3>
+<h5>Når kommer du?</h5>
+<div class="row" ng-if="$root.UserData.ThursdayAccess">
+    <div class="col-lg-3">Torsdag</div>
+    <div class="col-lg-3">
+        <button ng-click="$root.UserData.ArrivalSelected = 'Torsdag før kl 17'" class="btn btn-default arrival-button" 
+            ng-class="{'btn-success':$root.UserData.ArrivalSelected == 'Torsdag før kl 17'}">Før kl 17
+        </button>
+    </div>
+    <div class="col-lg-3">
+        <button ng-click="$root.UserData.ArrivalSelected = 'Torsdag etter kl 17'" class="btn btn-default arrival-button"
+            ng-class="{'btn-success':$root.UserData.ArrivalSelected == 'Torsdag etter kl 17'}">Etter kl 17
+        </button>
+    </div>    
+</div>
+<div class="row">
+    <div class="col-lg-3">Fredag</div>
+    <div class="col-lg-3">
+        <button ng-click="$root.UserData.ArrivalSelected = 'Fredag før kl 13'" class="btn btn-default arrival-button" 
+            ng-class="{'btn-success':$root.UserData.ArrivalSelected == 'Fredag før kl 13'}">Før kl 13
+        </button></div>
+    <div class="col-lg-3">
+        <button ng-click="$root.UserData.ArrivalSelected = 'Fredag mellom 13 og 16'" class="btn btn-default arrival-button" 
+            ng-class="{'btn-success':$root.UserData.ArrivalSelected == 'Fredag mellom 13 og 16'}">Mellom 13 og 16
+        </button></div>
+    <div class="col-lg-3">
+        <button ng-click="$root.UserData.ArrivalSelected = 'Fredag etter kl 16'" class="btn btn-default arrival-button" 
+            ng-class="{'btn-success':$root.UserData.ArrivalSelected == 'Fredag etter kl 16'}">Etter kl 16
+        </button></div>
+</div>
+<div class="row">
+    <div class="col-lg-3">Lørdag</div>
+    <div class="col-lg-3">
+        <button ng-click="$root.UserData.ArrivalSelected = 'Lørdag før kl 14'" class="btn btn-default arrival-button" 
+            ng-class="{'btn-success':$root.UserData.ArrivalSelected == 'Lørdag før kl 14'}">Før kl 14
+        </button></div>  
+</div>
+<navigations back="'other'" forward="'departure'"></navigations>
